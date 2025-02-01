@@ -1,0 +1,80 @@
+header {
+    background-color: #ffffff;
+    padding: 0.625rem 1.25rem;
+    box-shadow: 0 0.125rem 0.3125rem rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 10;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+.logo img {
+    max-width: 9.375rem; 
+}
+.menu {
+    display: flex;
+}
+.menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.menu ul li {
+    margin-left: 5rem;
+}
+.menu ul li a {
+    text-decoration: none;
+    color: #929090;
+    font-size: 0.875rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.menu ul li a:hover {
+    color: #FE8C6D;
+}
+.menu-icon {
+    display: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    padding: 0.5rem;
+}
+#menu-toggle {
+    display: none;
+}
+@media (max-width: 62em) {
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #ffffff; 
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        padding: 1rem 0;
+    }
+    .menu ul {
+        flex-direction: column;
+        padding: 0;
+    }
+    .menu ul li {
+        margin: 0.75rem 0;
+    }
+    .menu ul li a {
+        color: #333; 
+        font-size: 1rem;
+        display: block;
+        padding: 0.75rem;
+    }
+    .menu-icon {
+        display: block;
+    }
+    #menu-toggle:checked + .menu-icon + .menu {
+        display: block;
+    }
+}
